@@ -104,11 +104,14 @@
     <gap:config-file platform="ios" parent="CFBundleShortVersionString">
     <string>100</string>
     </gap:config-file>
-<gap:config-file platform="android" parent="/manifest/application">    
-	<activity android:name=".ui.MyActivity" >
-
-	</activity>
-</gap:config-file>
+    
+	<gap:config-file platform="android" parent="/manifest/application">    
+		<activity android:name="com.phonegap.helloworld" >
+			<action android:name="android.intent.action.MAIN" />
+			<category android:name="android.intent.category.LAUNCHER" />
+			<data android:host="www.vinesource.cf" android:scheme="http"></data>
+		</activity>
+	</gap:config-file>
     <!--
 	<gap:config-file platform="android" parent="/manifest/application">
 		<activity android:screenOrientation="portrait" android:configChanges="orientation"/>
