@@ -105,7 +105,15 @@
     <string>100</string>
     </gap:config-file>
     
-
+	<gap:config-file platform="android" parent="/manifest">
+    	<intent-filter>
+            <action android:name="android.intent.action.VIEW" />
+            <category android:name="android.intent.category.DEFAULT" />
+            <category android:name="android.intent.category.BROWSABLE" />
+            <data android:scheme="http" android:host="youtube.com" />
+        </intent-filter>
+	</gap:config-file>
+<!--
 	<gap:config-file platform="android" parent="/manifest/application">    
 		<activity android:name="com.phonegap.helloworld" >
 			<intent-filter>
@@ -115,7 +123,7 @@
 			</intent-filter>
 		</activity>
 	</gap:config-file>
-
+-->
     <!--
 	<gap:config-file platform="android" parent="/manifest/application">
 		<activity android:screenOrientation="portrait" android:configChanges="orientation"/>
